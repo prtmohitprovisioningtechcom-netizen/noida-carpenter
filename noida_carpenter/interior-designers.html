@@ -842,6 +842,269 @@ p.ml_20.res-767-ml-0.mb-0 strong {
 }
 </style>
 
+
+<style id="mobile-responsive-css">
+/* --- FULL MOBILE RESPONSIVENESS FIXES --- */
+
+/* Medium Devices (Tablets, 991px and below) */
+@media (max-width: 991px) {
+    /* Floating Navbar */
+    .site-header-menu-inner > .container {
+        padding: 5px 15px !important;
+        margin: 5px 10px !important;
+        border-radius: 20px !important;
+        width: calc(100% - 20px) !important;
+        max-width: none !important;
+    }
+    .text-logo {
+        font-size: 22px !important;
+    }
+    
+    /* Mobile Menu Toggle Button */
+    .btn-show-menu-mobile {
+        margin-right: 5px !important;
+    }
+    
+    /* Mobile Menu Dropdown Colors */
+    .menu-mobile .menu {
+        background: #ffffff !important;
+        border-radius: 15px !important;
+        padding: 10px !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+    }
+    .menu-mobile .menu > li > a {
+        color: #000000 !important;
+        padding: 12px 20px !important;
+        border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+    }
+    
+    /* Reduce Slider Height for Mobile Portrait */
+    .carousel-item img {
+        height: 50vh !important;
+    }
+    
+    /* Fix Why Choose Us Overlapping Images on Mobile */
+    .premium-image-stack {
+        min-height: 400px !important;
+    }
+    .premium-image-stack img:first-child {
+        height: 300px !important;
+        width: 85% !important;
+    }
+    .premium-image-stack img:last-child {
+        height: 250px !important;
+        width: 75% !important;
+        bottom: 20px !important;
+        border-width: 8px !important;
+    }
+}
+
+/* Small Devices (Phones, 767px and below) */
+@media (max-width: 767px) {
+    /* General Spacing */
+    section.ttm-row {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+    }
+    
+    /* Reduce Slider Height Even More */
+    .carousel-item img {
+        height: 40vh !important;
+    }
+    
+    /* Headings & Typography */
+    .title-header h2.title {
+        font-size: 28px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 15px !important;
+    }
+    .title-header h3 {
+        font-size: 12px !important;
+        letter-spacing: 1px !important;
+    }
+    
+    /* 99.9% Stats Banner */
+    p.ml_20.res-767-ml-0.mb-0 {
+        padding: 15px 20px !important;
+        font-size: 14px !important;
+        display: block !important;
+        margin-top: 15px !important;
+    }
+    p.ml_20.res-767-ml-0.mb-0 strong {
+        font-size: 28px !important;
+    }
+    
+    /* Why Choose Us Images - Mobile Stack */
+    .premium-image-stack {
+        min-height: 350px !important;
+        margin-top: 20px !important;
+    }
+    .premium-image-stack img:first-child {
+        height: 250px !important;
+        width: 90% !important;
+        right: 0 !important;
+    }
+    .premium-image-stack img:last-child {
+        height: 200px !important;
+        width: 80% !important;
+        left: 0 !important;
+        bottom: 10px !important;
+        border-width: 6px !important;
+    }
+    
+    /* Services Cards */
+    .featured-imagebox-portfolio {
+        margin-bottom: 30px !important;
+    }
+    .featured-imagebox-portfolio .featured-content {
+        padding: 30px 20px 20px 20px !important;
+    }
+    
+    /* Footer */
+    footer.footer .widget-area {
+        margin-bottom: 25px !important;
+    }
+    footer.footer .featured-icon-box.style1 .featured-desc p {
+        font-size: 13px !important;
+    }
+}
+</style>
+
+
+
+
+
+<style id="navbar-mobile-fix-v2">
+/* --- BULLETPROOF NAVBAR FOR MOBILE --- */
+@media (max-width: 991px) {
+    /* 1. Remove the floating island on mobile - make it a clean, full-width white bar */
+    .site-header-menu-inner > .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 5px 15px !important;
+        border-radius: 0 !important;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05) !important;
+    }
+    
+    /* 2. Reset navigation structure to avoid flexbox clashes with the template */
+    .site-navigation {
+        display: block !important;
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 60px !important;
+    }
+    
+    /* 3. Logo on the left */
+    .site-branding {
+        float: left !important;
+        position: relative !important;
+        padding: 15px 0 !important;
+        max-width: 80% !important;
+    }
+    .text-logo {
+        font-size: 20px !important;
+        line-height: 1 !important;
+        margin: 0 !important;
+    }
+
+    /* 4. Hamburger menu on the absolute right */
+    .btn-show-menu-mobile {
+        position: absolute !important;
+        right: 0 !important;
+        top: 15px !important;
+        margin: 0 !important;
+        display: block !important;
+    }
+    
+    /* GUARANTEE the hamburger is dark black so you can see it on the white bar */
+    .menubar-inner, .menubar-inner::before, .menubar-inner::after,
+    .btn-show-menu-mobile span,
+    .btn-show-menu-mobile .menubar-box,
+    .btn-show-menu-mobile .menubar-inner {
+        background-color: #000000 !important;
+    }
+
+    /* 5. Mobile Dropdown Menu */
+    .menu-mobile {
+        width: 100% !important;
+        background: #ffffff !important;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        padding: 10px 0 !important;
+        border-top: 1px solid #eeeeee !important;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    }
+    .menu-mobile .menu {
+        display: block !important;
+        background: #ffffff !important;
+    }
+    .menu-mobile .menu > li > a {
+        color: #000000 !important;
+        border-bottom: 1px solid #f9f9f9 !important;
+        padding: 12px 20px !important;
+        display: block !important;
+    }
+}
+
+/* Fix for very small phones */
+@media (max-width: 480px) {
+    .text-logo {
+        font-size: 16px !important;
+    }
+    .btn-show-menu-mobile {
+        top: 10px !important;
+    }
+}
+</style>
+
+
+<style id="navbar-zindex-fix">
+/* --- FORCE NAVBAR AND DROPDOWN OVER SLIDER --- */
+/* The slider was hiding the mobile dropdown because of z-index stacking context */
+
+header#masthead, 
+.site-header-menu, 
+.site-header-menu-inner,
+.site-header-menu-inner > .container {
+    position: relative !important;
+    z-index: 999999 !important; /* Absurdly high to beat any slider */
+}
+
+@media (max-width: 991px) {
+    /* Ensure the mobile menu specifically has max z-index */
+    .menu-mobile {
+        z-index: 9999999 !important;
+        position: absolute !important;
+    }
+    
+    /* Ensure nothing in the carousel or slider can overflow on top */
+    #homeCarousel, .carousel, .carousel-inner, .carousel-item {
+        z-index: 1 !important;
+    }
+}
+</style>
+
+
+<style id="slider-mobile-margin">
+/* --- SLIDER STICK TO NAVBAR ON MOBILE --- */
+@media (max-width: 991px) {
+    /* Remove any gap above the slider so it sticks right under the navbar */
+    #homeCarousel, .carousel, .ttm-slider {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+    
+    /* Ensure the header doesn't push the slider down */
+    header#masthead, .site-header-menu, .site-header-menu-inner {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+}
+</style>
+
 </head>
 
 
