@@ -3122,3 +3122,12 @@ section.error-404 .page-content p {
     height: 400px;
     width: 100%
 }
+
+/* Fix long email addresses overflowing */
+.featured-desc p, 
+.widget-contact p, 
+.widget-contact li,
+.widget-contact li p {
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
