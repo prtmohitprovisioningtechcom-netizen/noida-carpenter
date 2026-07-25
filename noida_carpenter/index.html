@@ -2050,7 +2050,27 @@ footer.footer .featured-icon .ttm-icon::after,
     <script src="revolution/js/slider.js"></script>
     <script src="revolution/js/revolution.tools.min.js"></script>
     <script src="revolution/js/rs6.min.html"></script>
-
+    <script>
+    $(window).on('load', function() {
+        var $gallery = $('.isotope-project');
+        if ($gallery.length > 0) {
+            var $items = $gallery.find('.project_item');
+            if ($items.length > 4) {
+                // Wait a small moment to ensure initial isotope layout is done before filtering
+                setTimeout(function() {
+                    $gallery.isotope({
+                        filter: function() {
+                            return $(this).index() < 4;
+                        }
+                    });
+                    
+                    var $seeMoreBtn = $('<div class="text-center mt-30 mb-30" style="width:100%; margin-top:20px;"><a href="gallery.html" class="ttm-btn ttm-btn-size-md ttm-btn-shape-squar ttm-btn-style-fill ttm-btn-color-skincolor">See More</a></div>');
+                    $gallery.after($seeMoreBtn);
+                }, 100);
+            }
+        }
+    });
+    </script>
 </body>
 
 
