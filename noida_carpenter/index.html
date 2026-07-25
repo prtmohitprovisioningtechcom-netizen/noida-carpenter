@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 
@@ -1125,6 +1125,179 @@ header#masthead, .site-header-menu, .site-header-menu-inner {
 }
 </style>
 
+<style id="footer-colors-only">
+/* --- PURE BLACK FOOTER WITH WHITE TEXT --- */
+footer.footer, 
+footer.footer.ttm-bgcolor-darkgrey,
+footer.footer .ttm-bg-layer,
+footer.footer .ttm-row-wrapper-bg-layer,
+.bottom-footer-text {
+    background-color: #000000 !important;
+    background: #000000 !important;
+    background-image: none !important;
+}
+
+footer.footer *,
+footer.footer p,
+footer.footer a,
+footer.footer span,
+footer.footer h1,
+footer.footer h2,
+footer.footer h3,
+footer.footer h4,
+footer.footer h5,
+footer.footer h6,
+footer.footer li,
+footer.footer div,
+footer.footer strong,
+footer.footer .textwidget,
+footer.footer .menu li a,
+.bottom-footer-text,
+.bottom-footer-text * {
+    color: #ffffff !important;
+    text-shadow: none !important;
+}
+
+footer.footer a:hover,
+footer.footer a:focus,
+footer.footer a:active,
+footer.footer .menu li a:hover {
+    color: #ffffff !important;
+}
+
+footer.footer form button.submit,
+footer.footer form button.submit * {
+    color: #000000 !important;
+    background-color: #ffffff !important;
+}
+
+footer.footer .ttm-icon, 
+footer.footer .social-icons li a,
+footer.footer i,
+footer.footer .fa,
+footer.footer .flaticon {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+</style>
+<style id="page-title-bg">
+/* --- PAGE TITLE BACKGROUND IMAGE INJECTION --- */
+.ttm-page-title-row {
+    background-image: url('images/gallery-2.jpeg') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* Dark overlay to make white text readable */
+.ttm-page-title-row::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important; 
+    left: 0 !important; 
+    right: 0 !important; 
+    bottom: 0 !important;
+    background: rgba(0, 0, 0, 0.6) !important;
+    z-index: -1 !important;
+}
+
+.ttm-page-title-row-inner {
+    background-color: transparent !important;
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.page-title-heading h2, .page-title-heading h1 {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
+}
+</style>
+<style id="footer-contact-compress">
+/* --- COMPRESS FOOTER CONTACT INFO --- */
+
+/* Align icon and text on a single compact line */
+footer.footer .featured-icon-box.style1 {
+    display: flex !important;
+    align-items: center !important;
+    margin-bottom: 12px !important;
+    padding: 0 !important;
+}
+
+/* Give the icon some breathing room on the right */
+footer.footer .featured-icon-box.style1 .featured-icon {
+    margin-right: 15px !important;
+    flex-shrink: 0 !important;
+}
+
+/* Hide the big headings ("Phone Number", "Email Address") */
+footer.footer .featured-icon-box.style1 .featured-title {
+    display: none !important;
+}
+
+/* Ensure the description text is vertically centered and compact */
+footer.footer .featured-icon-box.style1 .featured-desc,
+footer.footer .featured-icon-box.style1 .featured-desc p {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+}
+
+/* Reduce some padding on the widgets themselves to make the footer a bit smaller overall */
+footer.footer .widget {
+    margin-bottom: 25px !important;
+}
+footer.footer .first-footer {
+    padding: 35px 0 20px !important;
+}
+</style>
+<style id="remove-icon-bg">
+/* --- REMOVE BACKGROUND DESIGN BEHIND CUSTOM IMAGE ICONS --- */
+
+/* Footer Icons */
+footer.footer .featured-icon .ttm-icon,
+/* Contact Page Body Icons */
+.site-main .featured-icon-box.style7 .ttm-icon {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    height: auto !important;
+    width: auto !important;
+    display: inline-block !important;
+}
+
+/* Remove any pseudo-elements creating shapes behind */
+footer.footer .featured-icon .ttm-icon::before,
+footer.footer .featured-icon .ttm-icon::after,
+.site-main .featured-icon-box.style7 .ttm-icon::before,
+.site-main .featured-icon-box.style7 .ttm-icon::after {
+    display: none !important;
+    content: none !important;
+    background: transparent !important;
+}
+</style>
+<style id="remove-footer-social">
+/* --- REMOVE SOCIAL ICONS OPPOSITE TO COPYRIGHT IN FOOTER --- */
+.bottom-footer-text .col-lg-4.col-md-4,
+.bottom-footer-text .social-icons {
+    display: none !important;
+}
+
+/* Center the copyright text now that the social icons are gone */
+.bottom-footer-text .col-lg-8.col-md-8 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+}
+</style>
 </head>
 
 
@@ -1217,11 +1390,11 @@ header#masthead, .site-header-menu, .site-header-menu-inner {
             </div>
         </div>
         <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev" style="z-index: 3;">
-            <span class="carousel-control-prev-icon" aria-hidden="true" style="width: 50px; height: 50px; background-color: rgba(217, 119, 6, 0.8); border-radius: 50%;"></span>
+            <span class="carousel-control-prev-icon" aria-hidden="true" style="width: 35px; height: 35px; background-color: rgba(217, 119, 6, 0.8); border-radius: 50%;"></span>
             <span class="sr-only">Previous</span>
         </a>
         <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next" style="z-index: 3;">
-            <span class="carousel-control-next-icon" aria-hidden="true" style="width: 50px; height: 50px; background-color: rgba(217, 119, 6, 0.8); border-radius: 50%;"></span>
+            <span class="carousel-control-next-icon" aria-hidden="true" style="width: 35px; height: 35px; background-color: rgba(217, 119, 6, 0.8); border-radius: 50%;"></span>
             <span class="sr-only">Next</span>
         </a>
     </div>
@@ -1486,7 +1659,7 @@ header#masthead, .site-header-menu, .site-header-menu-inner {
 </div>
     <!--site-main end-->
 <div class="call-action-btn">
- <a href="tel:+91-9555091156"><i class="fa fa-phone"></i></a>
+ <a href="tel:+91-9555091156"><img src="images/phone.png" alt="Phone" style="width: 35px; height: 35px; object-fit: contain;"></a>
 </div>
 <div class="whatsapp-btn">
  <a href="https://api.whatsapp.com/send?phone=+91-95550%2091156&amp;text=Hey%20there" target="_blank"><i class="fa fa-whatsapp"></i></a>
@@ -1582,7 +1755,7 @@ header#masthead, .site-header-menu, .site-header-menu-inner {
                             <div class="featured-icon-box icon-align-before-content icon-ver_align-top style1">
                                 <div class="featured-icon">
                                     <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-xs">
-                                        <i class="flaticon flaticon-call-1"></i>
+                                        <img src="images/phone.png" alt="Phone" style="width: 35px; height: 35px; object-fit: contain;">
                                     </div>
                                 </div>
                                 <div class="featured-content">
@@ -1597,7 +1770,7 @@ header#masthead, .site-header-menu, .site-header-menu-inner {
                             <div class="featured-icon-box icon-align-before-content icon-ver_align-top style1">
                                 <div class="featured-icon">
                                     <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-xs">
-                                        <i class="flaticon flaticon-email"></i>
+                                        <img src="images/email.jpg" alt="Email" style="width: 35px; height: 35px; object-fit: contain;">
                                     </div>
                                 </div>
                                 <div class="featured-content">
@@ -1612,7 +1785,7 @@ header#masthead, .site-header-menu, .site-header-menu-inner {
                             <div class="featured-icon-box icon-align-before-content icon-ver_align-top style1">
                                 <div class="featured-icon">
                                     <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-xs">
-                                        <i class="flaticon flaticon-navigation"></i>
+                                        <img src="images/visit.png" alt="Visit" style="width: 35px; height: 35px; object-fit: contain;">
                                     </div>
                                 </div>
                                 <div class="featured-content">
@@ -1674,144 +1847,14 @@ header#masthead, .site-header-menu, .site-header-menu-inner {
     <script src="revolution/js/revolution.tools.min.js"></script>
     <script src="revolution/js/rs6.min.html"></script>
 
-<style id="nuclear-footer-fix">
-/* --- NUCLEAR FOOTER CSS: COMPACT HEIGHT & PURE WHITE TEXT --- */
-
-/* 1. CRUSH ALL HEIGHT/PADDING/MARGINS */
-footer.footer, 
-footer.footer .first-footer, 
-footer.footer .second-footer,
-footer.footer .widget-area,
-footer.footer .widget,
-footer.footer .row,
-footer.footer .container,
-footer.footer .pt-35,
-footer.footer .pb-35 {
-    padding-top: 5px !important;
-    padding-bottom: 5px !important;
-    margin-top: 0 !important;
-    margin-bottom: 5px !important;
-}
-
-/* Remove huge gaps in widget titles */
-footer.footer .widget-title {
-    margin-bottom: 10px !important;
-    padding-bottom: 0 !important;
-    font-size: 18px !important;
-}
-
-/* 2. FORCE ABSOLUTELY EVERY PIECE OF TEXT TO BE WHITE */
-footer.footer *,
-footer.footer p,
-footer.footer a,
-footer.footer span,
-footer.footer h1,
-footer.footer h2,
-footer.footer h3,
-footer.footer h4,
-footer.footer h5,
-footer.footer h6,
-footer.footer li,
-footer.footer div,
-footer.footer strong,
-footer.footer .textwidget,
-footer.footer .menu li a,
-.bottom-footer-text,
-.bottom-footer-text * {
-    color: #ffffff !important;
-    text-shadow: none !important;
-}
-
-/* Override any hover effects trying to change text color */
-footer.footer a:hover,
-footer.footer a:focus,
-footer.footer a:active,
-footer.footer .menu li a:hover {
-    color: #ffffff !important;
-}
-
-/* 3. ENSURE BACKGROUND IS PURE BLACK */
-footer.footer, 
-footer.footer.ttm-bgcolor-darkgrey,
-footer.footer .ttm-bg-layer,
-footer.footer .ttm-row-wrapper-bg-layer,
-.bottom-footer-text {
-    background-color: #000000 !important;
-    background: #000000 !important;
-    background-image: none !important;
-}
-
-/* 4. FIX SUBSCRIBE BUTTON SO IT IS VISIBLE */
-footer.footer form button.submit,
-footer.footer form button.submit * {
-    color: #000000 !important;
-    background-color: #ffffff !important;
-}
-
-/* 5. FIX ICONS TO BE PURE WHITE OUTLINES */
-footer.footer .ttm-icon, 
-footer.footer .social-icons li a,
-footer.footer i,
-footer.footer .fa,
-footer.footer .flaticon {
-    background-color: transparent !important;
-    color: #ffffff !important;
-    border-color: #ffffff !important;
-}
-footer.footer .featured-icon-box.style1 .featured-icon {
-    height: auto !important;
-    width: auto !important;
-    line-height: normal !important;
-}
-</style>
-
-
-<style id="compress-contact-footer">
-/* --- COMPRESS FOOTER CONTACT SECTION --- */
-
-/* Align icon and text on a single compact line */
-footer.footer .featured-icon-box.style1 {
-    display: flex !important;
-    align-items: flex-start !important;
-    margin-bottom: 8px !important;
-    padding: 0 !important;
-}
-
-/* Shrink the icon container */
-footer.footer .featured-icon-box.style1 .featured-icon {
-    margin-right: 12px !important;
-    margin-top: 2px !important;
-    flex-shrink: 0 !important;
-}
-
-/* Shrink the actual icon inside it */
-footer.footer .featured-icon-box.style1 .ttm-icon {
-    font-size: 16px !important;
-    width: auto !important;
-    height: auto !important;
-    border: none !important;
-    padding: 0 !important;
-}
-
-/* Hide the unnecessary big headings ("Phone Number", etc.) to save tons of vertical space */
-footer.footer .featured-icon-box.style1 .featured-title {
-    display: none !important;
-}
-
-/* Ensure the description text is tight */
-footer.footer .featured-icon-box.style1 .featured-desc {
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-footer.footer .featured-icon-box.style1 .featured-desc p {
-    margin: 0 !important;
-    font-size: 14px !important;
-    line-height: 1.4 !important;
-}
-</style>
-
 </body>
 
 
 </html>
+
+
+
+
+
+
+

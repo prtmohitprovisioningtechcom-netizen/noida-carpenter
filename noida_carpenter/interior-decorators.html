@@ -1121,6 +1121,573 @@ header#masthead, .site-header-menu, .site-header-menu-inner {
 }
 </style>
 
+
+
+<style id="service-single-ultra-premium-css">
+/* --- ULTRA PREMIUM REDESIGN FOR SINGLE SERVICE PAGES --- */
+
+/* Page Background Enhancement */
+.site-main {
+    background-color: #f4f7f6 !important;
+    background-image: radial-gradient(circle at 100% 0%, rgba(217,119,6,0.03) 0%, transparent 50%),
+                      radial-gradient(circle at 0% 100%, rgba(245,158,11,0.03) 0%, transparent 50%) !important;
+}
+
+/* Main Content Area Card - Glass Effect */
+.ttm-service-single-content-area {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 30px !important;
+    padding: 45px !important;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.04), 0 0 0 8px rgba(255,255,255,0.5) !important;
+    border: 1px solid rgba(217, 119, 6, 0.1) !important;
+    margin-bottom: 50px !important;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(0);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.ttm-service-single-content-area:hover {
+    transform: translateY(-5px);
+}
+
+/* Elegant Top Border for Card */
+.ttm-service-single-content-area::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, #d97706, #f59e0b, #fbbf24, #d97706);
+    background-size: 300% 100%;
+    animation: gradientShift 4s ease infinite;
+}
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Page Title inside content area */
+.ttm-service-single-content-area h2 {
+    font-size: 38px !important;
+    font-weight: 900 !important;
+    color: #0f172a !important;
+    margin-bottom: 30px !important;
+    position: relative !important;
+    padding-bottom: 15px !important;
+    letter-spacing: -1px !important;
+}
+.ttm-service-single-content-area h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+    height: 5px;
+    background: linear-gradient(90deg, #d97706, #f59e0b);
+    border-radius: 5px;
+}
+
+/* Featured Image */
+.ttm-service-featured-wrapper .ttm_single_image-wrapper img {
+    border-radius: 24px !important;
+    box-shadow: 0 25px 45px rgba(217,119,6,0.15) !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    max-height: 500px !important;
+    transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    filter: contrast(1.05) saturate(1.1);
+}
+.ttm-service-featured-wrapper:hover .ttm_single_image-wrapper img {
+    transform: scale(1.03) translateY(-5px) !important;
+    box-shadow: 0 30px 60px rgba(217,119,6,0.2) !important;
+}
+.ttm-service-featured-wrapper {
+    overflow: hidden !important;
+    border-radius: 24px !important;
+    margin-bottom: 40px !important;
+    padding-top: 0 !important;
+    position: relative;
+}
+
+/* Overlay gradient on image hover */
+.ttm-service-featured-wrapper::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(217,119,6,0.2), transparent);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    border-radius: 24px;
+}
+.ttm-service-featured-wrapper:hover::after {
+    opacity: 1;
+}
+
+
+/* Remove original pt-20 from wrapper via CSS to tighten space */
+.ttm_single_image-wrapper.pt-20 {
+    padding-top: 0 !important;
+}
+
+/* Typography for content - Drop Cap Effect for first paragraph */
+.ttm-service-classic-content > p:first-of-type::first-letter {
+    float: left;
+    font-size: 65px !important;
+    line-height: 55px !important;
+    padding: 5px 15px 5px 0 !important;
+    color: #d97706 !important;
+    font-weight: 900 !important;
+    font-family: serif;
+    text-shadow: 2px 2px 0px rgba(217, 119, 6, 0.1);
+}
+
+.ttm-service-classic-content p, .ttm-service-classic-content p span {
+    font-size: 17px !important;
+    line-height: 1.9 !important;
+    color: #475569 !important;
+    margin-bottom: 25px !important;
+}
+
+/* "Top Services Offered by" text */
+.ttm-service-classic-content p strong span {
+    font-size: 22px !important;
+    color: #0f172a !important;
+    display: block !important;
+    margin-top: 30px !important;
+    margin-bottom: 15px !important;
+    font-weight: 800 !important;
+    position: relative;
+    padding-left: 20px;
+    border-left: 4px solid #d97706;
+}
+
+/* Services Links as Pills */
+.premium-services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px dashed rgba(217,119,6,0.3);
+}
+.premium-services-list a {
+    display: inline-flex !important;
+    align-items: center;
+    background: #ffffff !important;
+    color: #334155 !important;
+    padding: 12px 25px !important;
+    border-radius: 40px !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02) !important;
+}
+/* Bullet inside pill */
+.premium-services-list a::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #d97706;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+.premium-services-list a:hover {
+    background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+    color: #ffffff !important;
+    border-color: transparent !important;
+    transform: translateY(-4px) scale(1.02) !important;
+    box-shadow: 0 12px 25px rgba(217, 119, 6, 0.3) !important;
+}
+.premium-services-list a:hover::before {
+    background: #ffffff;
+    transform: scale(1.5);
+}
+
+/* Sidebar Redesign - STICKY! */
+.sidebar-left {
+    position: sticky !important;
+    top: 100px !important;
+    height: max-content;
+    z-index: 99;
+}
+
+/* ONLY TARGET SIDEBAR WIDGETS, NOT FOOTER WIDGETS */
+.sidebar .widget {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 24px !important;
+    padding: 35px !important;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.03), 0 0 0 6px rgba(255,255,255,0.4) !important;
+    border: 1px solid rgba(217, 119, 6, 0.08) !important;
+    margin-bottom: 35px !important;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+.sidebar .widget:hover {
+    transform: translateY(-5px);
+}
+
+/* Subtle accent on widgets */
+.sidebar .widget::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, #f59e0b, #d97706);
+}
+
+.sidebar .widget-title {
+    font-size: 22px !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+    margin-bottom: 25px !important;
+    position: relative !important;
+    padding-bottom: 12px !important;
+}
+.sidebar .widget-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background: #d97706;
+    border-radius: 2px;
+}
+
+/* Sidebar Menu */
+.sidebar .widget-menu li {
+    border-bottom: 1px solid rgba(0,0,0,0.03) !important;
+    padding: 14px 0 !important;
+}
+.sidebar .widget-menu li:last-child {
+    border-bottom: none !important;
+}
+.sidebar .widget-menu li a {
+    color: #475569 !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    align-items: center;
+}
+/* Arrow icon for list */
+.sidebar .widget-menu li a::before {
+    content: '\f101'; /* FontAwesome angle-double-right */
+    font-family: 'FontAwesome';
+    margin-right: 10px;
+    color: #cbd5e1;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+.sidebar .widget-menu li.active a, .sidebar .widget-menu li a:hover {
+    color: #d97706 !important;
+    padding-left: 12px !important;
+}
+.sidebar .widget-menu li.active a::before, .sidebar .widget-menu li a:hover::before {
+    color: #d97706;
+}
+.sidebar .widget-menu li.active a {
+    font-weight: 800 !important;
+}
+
+/* Contact Widget in Sidebar */
+.sidebar .contact-widget {
+    background: linear-gradient(135deg, #0f172a, #1e293b) !important;
+}
+.sidebar .contact-widget .widget-title {
+    color: #ffffff !important;
+}
+.sidebar .contact-widget .widget-title::after {
+    background: #ffffff !important;
+}
+.sidebar .contact-widget .featured-icon-box {
+    margin-bottom: 25px !important;
+    padding: 0 !important;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding-bottom: 15px !important;
+}
+.sidebar .contact-widget .featured-icon-box:last-child {
+    border-bottom: none;
+    margin-bottom: 0 !important;
+}
+.sidebar .contact-widget .ttm-icon {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #f59e0b !important;
+    border-radius: 50% !important;
+    width: 50px !important;
+    height: 50px !important;
+    line-height: 50px !important;
+    font-size: 20px !important;
+    margin-right: 18px !important;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.sidebar .contact-widget .featured-title h3 {
+    font-size: 14px !important;
+    color: #94a3b8 !important;
+    font-weight: 500 !important;
+    margin-bottom: 5px !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.sidebar .contact-widget .featured-desc p {
+    font-size: 16px !important;
+    color: #ffffff !important;
+    font-weight: 600;
+}
+.sidebar .contact-widget::before {
+    background: #f59e0b !important;
+}
+
+/* Call Us Now Banner Injection */
+.premium-call-banner {
+    background: linear-gradient(120deg, #d97706, #b45309);
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 15px 30px rgba(217, 119, 6, 0.2);
+}
+.premium-call-banner-content h4 {
+    color: #ffffff !important;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+.premium-call-banner-content p {
+    color: rgba(255,255,255,0.9) !important;
+    margin: 0 !important;
+    font-size: 15px !important;
+}
+.premium-call-banner-btn {
+    background: #ffffff;
+    color: #d97706 !important;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    white-space: nowrap;
+}
+.premium-call-banner-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    color: #0f172a !important;
+}
+
+/* Mobile Responsiveness for Service Pages */
+@media (max-width: 991px) {
+    .ttm-service-single-content-area {
+        padding: 30px 20px !important;
+    }
+    .ttm-service-single-content-area h2 {
+        font-size: 28px !important;
+    }
+    .sidebar .widget {
+        margin-top: 40px !important;
+    }
+    .sidebar-left {
+        position: static !important;
+    }
+    .premium-call-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+</style>
+<style id="footer-colors-only">
+/* --- PURE BLACK FOOTER WITH WHITE TEXT --- */
+footer.footer, 
+footer.footer.ttm-bgcolor-darkgrey,
+footer.footer .ttm-bg-layer,
+footer.footer .ttm-row-wrapper-bg-layer,
+.bottom-footer-text {
+    background-color: #000000 !important;
+    background: #000000 !important;
+    background-image: none !important;
+}
+
+footer.footer *,
+footer.footer p,
+footer.footer a,
+footer.footer span,
+footer.footer h1,
+footer.footer h2,
+footer.footer h3,
+footer.footer h4,
+footer.footer h5,
+footer.footer h6,
+footer.footer li,
+footer.footer div,
+footer.footer strong,
+footer.footer .textwidget,
+footer.footer .menu li a,
+.bottom-footer-text,
+.bottom-footer-text * {
+    color: #ffffff !important;
+    text-shadow: none !important;
+}
+
+footer.footer a:hover,
+footer.footer a:focus,
+footer.footer a:active,
+footer.footer .menu li a:hover {
+    color: #ffffff !important;
+}
+
+footer.footer form button.submit,
+footer.footer form button.submit * {
+    color: #000000 !important;
+    background-color: #ffffff !important;
+}
+
+footer.footer .ttm-icon, 
+footer.footer .social-icons li a,
+footer.footer i,
+footer.footer .fa,
+footer.footer .flaticon {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+</style>
+<style id="page-title-bg">
+/* --- PAGE TITLE BACKGROUND IMAGE INJECTION --- */
+.ttm-page-title-row {
+    background-image: url('images/gallery-10.jpeg') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* Dark overlay to make white text readable */
+.ttm-page-title-row::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important; 
+    left: 0 !important; 
+    right: 0 !important; 
+    bottom: 0 !important;
+    background: rgba(0, 0, 0, 0.6) !important;
+    z-index: -1 !important;
+}
+
+.ttm-page-title-row-inner {
+    background-color: transparent !important;
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.page-title-heading h2, .page-title-heading h1 {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
+}
+</style>
+<style id="footer-contact-compress">
+/* --- COMPRESS FOOTER CONTACT INFO --- */
+
+/* Align icon and text on a single compact line */
+footer.footer .featured-icon-box.style1 {
+    display: flex !important;
+    align-items: center !important;
+    margin-bottom: 12px !important;
+    padding: 0 !important;
+}
+
+/* Give the icon some breathing room on the right */
+footer.footer .featured-icon-box.style1 .featured-icon {
+    margin-right: 15px !important;
+    flex-shrink: 0 !important;
+}
+
+/* Hide the big headings ("Phone Number", "Email Address") */
+footer.footer .featured-icon-box.style1 .featured-title {
+    display: none !important;
+}
+
+/* Ensure the description text is vertically centered and compact */
+footer.footer .featured-icon-box.style1 .featured-desc,
+footer.footer .featured-icon-box.style1 .featured-desc p {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+}
+
+/* Reduce some padding on the widgets themselves to make the footer a bit smaller overall */
+footer.footer .widget {
+    margin-bottom: 25px !important;
+}
+footer.footer .first-footer {
+    padding: 35px 0 20px !important;
+}
+</style>
+<style id="remove-icon-bg">
+/* --- REMOVE BACKGROUND DESIGN BEHIND CUSTOM IMAGE ICONS --- */
+
+/* Footer Icons */
+footer.footer .featured-icon .ttm-icon,
+/* Contact Page Body Icons */
+.site-main .featured-icon-box.style7 .ttm-icon {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    height: auto !important;
+    width: auto !important;
+    display: inline-block !important;
+}
+
+/* Remove any pseudo-elements creating shapes behind */
+footer.footer .featured-icon .ttm-icon::before,
+footer.footer .featured-icon .ttm-icon::after,
+.site-main .featured-icon-box.style7 .ttm-icon::before,
+.site-main .featured-icon-box.style7 .ttm-icon::after {
+    display: none !important;
+    content: none !important;
+    background: transparent !important;
+}
+</style>
+<style id="remove-footer-social">
+/* --- REMOVE SOCIAL ICONS OPPOSITE TO COPYRIGHT IN FOOTER --- */
+.bottom-footer-text .col-lg-4.col-md-4,
+.bottom-footer-text .social-icons {
+    display: none !important;
+}
+
+/* Center the copyright text now that the social icons are gone */
+.bottom-footer-text .col-lg-8.col-md-8 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+}
+</style>
 </head>
 
 
@@ -1228,84 +1795,7 @@ header#masthead, .site-header-menu, .site-header-menu-inner {
                                                                       <li class="active"><a href="interior-decorators.html">Office & Home Woodwork</a></li>
                                                                   </ul>
                             </aside>
-                            <aside class="widget contact-widget with-title">
-                                <h3 class="widget-title">Contact Us</h3>      
-                                <div class="featured-icon-box icon-align-before-content icon-ver_align-top style1">
-                                    <div class="featured-icon">
-                                        <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-xs">
-                                            <i class="flaticon flaticon-call-1"></i>
-                                        </div>
-                                    </div>
-                                    <div class="featured-content">
-                                        <div class="featured-title">
-                                            <h3>Phone Number</h3>
-                                        </div>
-                                        <div class="featured-desc">
-                                            <p>+91-95550 91156</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="featured-icon-box icon-align-before-content icon-ver_align-top style1">
-                                    <div class="featured-icon">
-                                        <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-xs">
-                                            <i class="flaticon flaticon-email"></i>
-                                        </div>
-                                    </div>
-                                    <div class="featured-content">
-                                        <div class="featured-title">
-                                            <h3>Email Address</h3>
-                                        </div>
-                                        <div class="featured-desc">
-                                            <p></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="featured-icon-box icon-align-before-content icon-ver_align-top style1">
-                                    <div class="featured-icon">
-                                        <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-xs">
-                                            <i class="flaticon flaticon-navigation"></i>
-                                        </div>
-                                    </div>
-                                    <div class="featured-content">
-                                        <div class="featured-title">
-                                            <h3>Address</h3>
-                                        </div>
-                                        <div class="featured-desc">
-                                            <p>Noida </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </aside>
-                            <aside class="widget widget-archive">
-                                <h3 class="widget-title">Gallery</h3>
-                                <div id="gallery-2" class="gallery-wrapper">
-                                                                      <figure class="gallery-item">
-                                        <div class="gallery-icon landscape">
-                                            <a class="ttm_prettyphoto" href="default/1684410510.jpg" rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
-                                            <img width="150" height="150" class="img-fluid" src="images/gallery-17.jpeg" alt="V Furniture And Interior"></a>
-                                        </div>
-                                    </figure>
-                                                                      <figure class="gallery-item">
-                                        <div class="gallery-icon landscape">
-                                            <a class="ttm_prettyphoto" href="default/1684410526.jpg" rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
-                                            <img width="150" height="150" class="img-fluid" src="images/gallery-18.jpeg" alt="V Furniture And Interior"></a>
-                                        </div>
-                                    </figure>
-                                                                      <figure class="gallery-item">
-                                        <div class="gallery-icon landscape">
-                                            <a class="ttm_prettyphoto" href="default/1684410533.jpg" rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
-                                            <img width="150" height="150" class="img-fluid" src="images/gallery-19.jpeg" alt="V Furniture And Interior"></a>
-                                        </div>
-                                    </figure>
-                                                                      <figure class="gallery-item">
-                                        <div class="gallery-icon landscape">
-                                            <a class="ttm_prettyphoto" href="default/1684410546.jpg" rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
-                                            <img width="150" height="150" class="img-fluid" src="images/gallery-1.jpeg" alt="V Furniture And Interior"></a>
-                                        </div>
-                                    </figure>
-                                                                  </div>
-                            </aside>
-                        </div>
+                            </div>
                         <div class="col-lg-8 content-area">
                             <article class="ttm-service-single-content-area">
                                 <h2>Office & Home Woodwork</h2>
@@ -1321,7 +1811,7 @@ header#masthead, .site-header-menu, .site-header-menu-inner {
 
 <p><strong><span style="font-size:16px">Top Services Offered by V Furniture and Interiors:</span></strong></p>
 
-<p><span style="font-size:16px"><a href="interior-designers.html">Custom Furniture Making</a>&nbsp;|&nbsp;<a href="carpenters.html">Expert Furniture Repair</a>&nbsp;|&nbsp;<a href="modular-kitchen.html">Modular Kitchen Woodwork</a>&nbsp;|&nbsp;<a href="wardrobe.html">Wardrobe & Closet Design</a>&nbsp;|&nbsp;<a href="all-types-of-furniture.html">General Carpentry Services</a>&nbsp;|&nbsp;<a href="interior-decorators.html">Office & Home Woodwork</a></span></p>
+<div class="premium-services-list"><a href="interior-designers.html">Custom Furniture Making</a><a href="carpenters.html">Expert Furniture Repair</a><a href="modular-kitchen.html">Modular Kitchen Woodwork</a><a href="wardrobe.html">Wardrobe & Closet Design</a><a href="all-types-of-furniture.html">General Carpentry Services</a><a href="interior-decorators.html">Office & Home Woodwork</a></div>
                                     <div class="pt-10">
                                         <div class="row">
                                                                                   </div>
@@ -1336,7 +1826,7 @@ header#masthead, .site-header-menu, .site-header-menu-inner {
           </div>
 
 <div class="call-action-btn">
- <a href="tel:+91-9555091156"><i class="fa fa-phone"></i></a>
+ <a href="tel:+91-9555091156"><img src="images/phone.png" alt="Phone" style="width: 35px; height: 35px; object-fit: contain;"></a>
 </div>
 <div class="whatsapp-btn">
  <a href="https://api.whatsapp.com/send?phone=+91-9555091156%20+91-7982081239&amp;text=Hey%20there" target="_blank"><i class="fa fa-whatsapp"></i></a>
@@ -1432,7 +1922,7 @@ header#masthead, .site-header-menu, .site-header-menu-inner {
                             <div class="featured-icon-box icon-align-before-content icon-ver_align-top style1">
                                 <div class="featured-icon">
                                     <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-xs">
-                                        <i class="flaticon flaticon-call-1"></i>
+                                        <img src="images/phone.png" alt="Phone" style="width: 35px; height: 35px; object-fit: contain;">
                                     </div>
                                 </div>
                                 <div class="featured-content">
@@ -1447,7 +1937,7 @@ header#masthead, .site-header-menu, .site-header-menu-inner {
                             <div class="featured-icon-box icon-align-before-content icon-ver_align-top style1">
                                 <div class="featured-icon">
                                     <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-xs">
-                                        <i class="flaticon flaticon-email"></i>
+                                        <img src="images/email.jpg" alt="Email" style="width: 35px; height: 35px; object-fit: contain;">
                                     </div>
                                 </div>
                                 <div class="featured-content">
@@ -1462,7 +1952,7 @@ header#masthead, .site-header-menu, .site-header-menu-inner {
                             <div class="featured-icon-box icon-align-before-content icon-ver_align-top style1">
                                 <div class="featured-icon">
                                     <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-xs">
-                                        <i class="flaticon flaticon-navigation"></i>
+                                        <img src="images/visit.png" alt="Visit" style="width: 35px; height: 35px; object-fit: contain;">
                                     </div>
                                 </div>
                                 <div class="featured-content">
@@ -1524,144 +2014,20 @@ header#masthead, .site-header-menu, .site-header-menu-inner {
     <script src="revolution/js/revolution.tools.min.js"></script>
     <script src="revolution/js/rs6.min.html"></script>
 
-<style id="nuclear-footer-fix">
-/* --- NUCLEAR FOOTER CSS: COMPACT HEIGHT & PURE WHITE TEXT --- */
-
-/* 1. CRUSH ALL HEIGHT/PADDING/MARGINS */
-footer.footer, 
-footer.footer .first-footer, 
-footer.footer .second-footer,
-footer.footer .widget-area,
-footer.footer .widget,
-footer.footer .row,
-footer.footer .container,
-footer.footer .pt-35,
-footer.footer .pb-35 {
-    padding-top: 5px !important;
-    padding-bottom: 5px !important;
-    margin-top: 0 !important;
-    margin-bottom: 5px !important;
-}
-
-/* Remove huge gaps in widget titles */
-footer.footer .widget-title {
-    margin-bottom: 10px !important;
-    padding-bottom: 0 !important;
-    font-size: 18px !important;
-}
-
-/* 2. FORCE ABSOLUTELY EVERY PIECE OF TEXT TO BE WHITE */
-footer.footer *,
-footer.footer p,
-footer.footer a,
-footer.footer span,
-footer.footer h1,
-footer.footer h2,
-footer.footer h3,
-footer.footer h4,
-footer.footer h5,
-footer.footer h6,
-footer.footer li,
-footer.footer div,
-footer.footer strong,
-footer.footer .textwidget,
-footer.footer .menu li a,
-.bottom-footer-text,
-.bottom-footer-text * {
-    color: #ffffff !important;
-    text-shadow: none !important;
-}
-
-/* Override any hover effects trying to change text color */
-footer.footer a:hover,
-footer.footer a:focus,
-footer.footer a:active,
-footer.footer .menu li a:hover {
-    color: #ffffff !important;
-}
-
-/* 3. ENSURE BACKGROUND IS PURE BLACK */
-footer.footer, 
-footer.footer.ttm-bgcolor-darkgrey,
-footer.footer .ttm-bg-layer,
-footer.footer .ttm-row-wrapper-bg-layer,
-.bottom-footer-text {
-    background-color: #000000 !important;
-    background: #000000 !important;
-    background-image: none !important;
-}
-
-/* 4. FIX SUBSCRIBE BUTTON SO IT IS VISIBLE */
-footer.footer form button.submit,
-footer.footer form button.submit * {
-    color: #000000 !important;
-    background-color: #ffffff !important;
-}
-
-/* 5. FIX ICONS TO BE PURE WHITE OUTLINES */
-footer.footer .ttm-icon, 
-footer.footer .social-icons li a,
-footer.footer i,
-footer.footer .fa,
-footer.footer .flaticon {
-    background-color: transparent !important;
-    color: #ffffff !important;
-    border-color: #ffffff !important;
-}
-footer.footer .featured-icon-box.style1 .featured-icon {
-    height: auto !important;
-    width: auto !important;
-    line-height: normal !important;
-}
-</style>
-
-
-<style id="compress-contact-footer">
-/* --- COMPRESS FOOTER CONTACT SECTION --- */
-
-/* Align icon and text on a single compact line */
-footer.footer .featured-icon-box.style1 {
-    display: flex !important;
-    align-items: flex-start !important;
-    margin-bottom: 8px !important;
-    padding: 0 !important;
-}
-
-/* Shrink the icon container */
-footer.footer .featured-icon-box.style1 .featured-icon {
-    margin-right: 12px !important;
-    margin-top: 2px !important;
-    flex-shrink: 0 !important;
-}
-
-/* Shrink the actual icon inside it */
-footer.footer .featured-icon-box.style1 .ttm-icon {
-    font-size: 16px !important;
-    width: auto !important;
-    height: auto !important;
-    border: none !important;
-    padding: 0 !important;
-}
-
-/* Hide the unnecessary big headings ("Phone Number", etc.) to save tons of vertical space */
-footer.footer .featured-icon-box.style1 .featured-title {
-    display: none !important;
-}
-
-/* Ensure the description text is tight */
-footer.footer .featured-icon-box.style1 .featured-desc {
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-footer.footer .featured-icon-box.style1 .featured-desc p {
-    margin: 0 !important;
-    font-size: 14px !important;
-    line-height: 1.4 !important;
-}
-</style>
-
 </body>
 
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
