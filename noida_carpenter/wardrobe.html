@@ -1676,6 +1676,90 @@ footer.footer .featured-icon .ttm-icon::after,
     text-align: center !important;
 }
 </style>
+<style id="scroll-top-fix">
+/* --- FIX RIGHT SIDE BUTTONS (SCROLL TO TOP & WHATSAPP) --- */
+
+/* Move WhatsApp to the left side (stacked above the Phone button) */
+.whatsapp-btn {
+    right: auto !important;
+    left: 24px !important;
+    bottom: 80px !important;
+}
+
+/* Style the Scroll-to-Top Arrow Button properly on the right side */
+#totop {
+    display: block !important; 
+    position: fixed !important; /* ensure it stays fixed */
+    right: 24px !important;
+    bottom: 20px !important;
+    background-color: #d97706 !important; 
+    color: #ffffff !important;
+    z-index: 9999 !important;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important; /* Make it a perfect gol (round) circle */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    text-decoration: none !important;
+}
+
+#totop:hover {
+    opacity: 1;
+    transform: translateY(-3px);
+    background-color: #b45f00 !important;
+}
+
+/* Hide any potentially broken FontAwesome icon */
+#totop i {
+    display: none !important;
+}
+
+/* Draw a foolproof CSS Up-Arrow absolutely centered inside the circle */
+#totop::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 14px !important;
+    height: 14px !important;
+    border-top: 3px solid #ffffff !important;
+    border-left: 3px solid #ffffff !important;
+    /* Translate -50% to center, rotate 45deg to make it an up arrow */
+    /* We tweak the translate Y a bit so it looks visually centered */
+    transform: translate(-50%, -35%) rotate(45deg) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Remove any old template pseudo-elements */
+#totop::after {
+    display: none !important;
+}
+</style>
+<style id="custom-floating-icons">
+/* --- STRIP BACKGROUNDS FROM FLOATING BUTTONS & STYLE IMAGES --- */
+
+/* Remove the default colored background boxes, borders, and padding */
+.call-action-btn, .whatsapp-btn {
+    background: transparent !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Ensure the images themselves act as the buttons */
+.call-action-btn img, .whatsapp-btn img {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important; /* Make sure they are perfectly round */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;
+    background-color: #fff !important; /* Prevent transparent png issues */
+    object-fit: cover !important; /* Ensure the image fills the circle */
+    display: block !important;
+}
+</style>
 </head>
 
 
@@ -1817,7 +1901,7 @@ footer.footer .featured-icon .ttm-icon::after,
  <a href="tel:+91-9555091156"><img src="images/phone.png" alt="Phone" style="width: 35px; height: 35px; object-fit: contain;"></a>
 </div>
 <div class="whatsapp-btn">
- <a href="https://api.whatsapp.com/send?phone=+91-95550%2091156&amp;text=Hey%20there" target="_blank"><i class="fa fa-whatsapp"></i></a>
+ <a href="https://api.whatsapp.com/send?phone=+91-95550%2091156&amp;text=Hey%20there" target="_blank"><img src="images/whatsapp.jpeg" alt="WhatsApp"></a>
 </div>
 <style>
     .whatsapp-btn {
@@ -2006,6 +2090,10 @@ footer.footer .featured-icon .ttm-icon::after,
 
 
 </html>
+
+
+
+
 
 
 
