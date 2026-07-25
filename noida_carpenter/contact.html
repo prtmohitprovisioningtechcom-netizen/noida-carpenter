@@ -1587,7 +1587,26 @@ footer.footer .featured-icon .ttm-icon::after,
                                 </div>
                             </div><!-- section title end -->
                             <div class="padding_top30">
-                                <form class="contact_form wrap-form clearfix" method="post" action="#">
+                                <form class="contact_form wrap-form clearfix" onsubmit="sendToWhatsApp(event)">
+                                    <script>
+                                    function sendToWhatsApp(e) {
+                                        e.preventDefault();
+                                        var name = document.querySelector('.contact_form input[name="name"]').value;
+                                        var mobile = document.querySelector('.contact_form input[name="mobile"]').value;
+                                        var email = document.querySelector('.contact_form input[name="email"]').value;
+                                        var location = document.querySelector('.contact_form input[name="location"]').value;
+                                        var message = document.querySelector('.contact_form textarea[name="message"]').value;
+                                        
+                                        var text = "New Inquiry from Website:%0A" + 
+                                                   "Name: " + name + "%0A" + 
+                                                   "Mobile: " + mobile + "%0A" + 
+                                                   "Email: " + email + "%0A" + 
+                                                   "Location: " + location + "%0A" + 
+                                                   "Message: " + message;
+                                                   
+                                        window.open("https://api.whatsapp.com/send?phone=+918171534277&text=" + text, "_blank");
+                                    }
+                                    </script>
                                     <div class="row ttm-boxes-spacing-20px">
                                         <div class="col-md-12">
                                             <label>
